@@ -114,3 +114,5 @@ resource "azurerm_network_interface" "nic" {
     private_ip_address_allocation = "Dynamic"
   }
 }
+
+mera naam sandeep hai mai sachin or yogi kaa frnd hu
