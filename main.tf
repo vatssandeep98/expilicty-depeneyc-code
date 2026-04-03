@@ -116,3 +116,4 @@ resource "azurerm_network_interface" "nic" {
 }
 
 mera naam sandeep hai mai sachin or yogi kaa frnd hu
+heelo dosot
