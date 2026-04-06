@@ -1,8 +1,7 @@
 resource "azurerm_network_interface" "nic" {  
-  depends_on = [azurerm_subnet.subnet1]
   name                = "yogi-nic"
-  location            = "Central India"
-  resource_group_name = "sharma"
+  location            = azurerm_resource_group.rg1.location
+  resource_group_name = azurerm_resource_group.rg1.name
 
   ip_configuration {
     name                 = "internal"
