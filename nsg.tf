@@ -1,8 +1,7 @@
 resource "azurerm_network_security_group" "nsg" {  # NSG Banega  Port On or off krne ke liye
- depends_on = [ azurerm_resource_group.rg3 ]
   name                = "sharma-nsg"
-  location            = "Central India"
-  resource_group_name = "sharma"
+  location            = azurerm_resource_group.rg1.location
+  resource_group_name = azurerm_resource_group.rg1.name
 
   security_rule {
     name                       = "munibai-nsgwali"

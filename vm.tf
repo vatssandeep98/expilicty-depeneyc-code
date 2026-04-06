@@ -1,8 +1,7 @@
 resource "azurerm_virtual_machine" "vm" {
-  depends_on            = [azurerm_network_interface.nic]
   name                  = "samrat-vm"
-  location              = "Central India"
-  resource_group_name   = "sharma"
+  location              = azurerm_resource_group.rg1.location
+  resource_group_name   = azurerm_resource_group.rg1.name
   network_interface_ids = [azurerm_network_interface.nic.id]  #yha par NIC ID refer ho rahi hai
    vm_size = "Standard_B2as_v2"
   storage_image_reference {
