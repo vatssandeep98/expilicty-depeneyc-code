@@ -1,4 +1,5 @@
 variable "nic-name" {}
 variable "nic-location" {}
-variable "subnet_id" {}
 variable "rg-name" {}
+variable "subnet_id" {}
+variable "pip_id" {}

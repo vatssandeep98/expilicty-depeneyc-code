@@ -6,6 +6,19 @@ resource "azurerm_network_interface" "nic" {
   ip_configuration {
     name                          = "internal"
     subnet_id                     = var.subnet_id
+    public_ip_address_id          =  var.pip_id
     private_ip_address_allocation = "Dynamic"
   }
+}
+
+
+
+
+
+
+
+
+output "nic_id" {
+  value = azurerm_network_interface.nic.id
+  
 }

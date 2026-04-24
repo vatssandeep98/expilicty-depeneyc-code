@@ -1,12 +1,12 @@
 resource "azurerm_linux_virtual_machine" "vm" {
   name                = var.vm-name
-  resource_group_name = "yogika-rg"
-  location            = "east us"
-  size                = "Standard_F2"
+  resource_group_name = "sharma-rg"
+  location            = "central india"
+  size                = "Standard_B2as_v2"
   admin_username      = "yogiadmin"
-  admin_password =    "mera@naam@hai@kanhya"
+  admin_password =    "yogi@221133"
 
-  network_interface_ids = var.network_interface_ids
+  network_interface_ids = [var.network_interface_ids]
 disable_password_authentication = false
 
   os_disk {
